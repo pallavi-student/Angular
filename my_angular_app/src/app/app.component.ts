@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  message: string = "Hello from Bridgelabz";  // Define message property
+  message: string = "Hello from Bridegelabz";  
+  logoPath: string = 'assets/BL_logo_square_jpg (3).jpg';
 }
