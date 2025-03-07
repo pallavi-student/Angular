@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'] ,
+  standalone: true,
+  imports: [FormsModule] 
 })
 export class AppComponent {
-  title = 'HelloWorldApp';
-  logoPath: string ='assets/BL_logo_square_jpg (3).jpg';
-  url = "https://www.bridgelabz.com/"
+  message: string = "Hello from BridgeLabz";  
+  logoPath: string = "assets/BL_logo_square_jpg (3).jpg";   
+  userName: string = "";
 
-  ngOnInit(): void{
-    this.title = "Hello from BridgeLabz."
+  openBridgeLabz() {
+    window.open("https://www.bridgelabz.com", "_blank");
   }
-
-  onClick($event : MouseEvent){
-    console.log("Save Button is clicked!", $event);
-    window.open(this.url, "_blank");
-  }
 }
